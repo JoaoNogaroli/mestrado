@@ -1,0 +1,43 @@
+1. Problema da Mistura de Produtos
+
+Descrição: Uma empresa produz dois tipos de ração animal, A e B, 
+utilizando três ingredientes: milho, soja e suplemento vitamínico.
+Cada ração tem requisitos mínimos de nutrientes e custos de produção.
+Os ingredientes têm disponibilidade limitada e custos unitários. 
+O objetivo é determinar a quantidade de cada ração a ser produzida
+para maximizar o lucro, respeitando as restrições de ingredientes e nutrientes.
+
+Dados:
+
+| Ingrediente | Disponibilidade (kg) | Custo Unitário (R$/kg) |
+| --- | --- | --- |
+| Milho | 1000 | 0.50 |
+| Soja | 800 | 0.80 |
+| Suplemento Vitamínico | 200 | 1.50 |
+
+| Ração | Milho (kg/unidade) | Soja (kg/unidade) | Suplemento (kg/unidade) | Lucro (R$/unidade) |
+| --- | --- | --- | --- | --- |
+| A | 0.6 | 0.3 | 0.1 | 10.00 |
+| B | 0.4 | 0.4 | 0.2 | 12.00 |
+
+Requisitos Nutricionais Mínimos (por unidade de ração):
+
+• Ração A: 20 unidades de Proteína, 10 unidades de Energia
+
+• Ração B: 25 unidades de Proteína, 15 unidades de Energia
+
+Conteúdo Nutricional dos Ingredientes (por kg):
+| Ingrediente | Proteína (unidades/kg) | Energia (unidades/kg) |
+| --- | --- | --- |
+| Milho | 5 | 8 |
+| Soja | 10 | 5 |
+| Suplemento Vitamínico | 2 | 3 |
+
+Conceitos: Programação Linear, variáveis de decisão contínuas, 
+função objetivo de maximização, restrições de desigualdade.
+
+Dicas de Modelagem: Defina variáveis para a quantidade de cada ração.
+ Crie restrições para a disponibilidade de ingredientes e para os 
+ requisitos nutricionais de cada ração. 
+ A função objetivo será o lucro total.
+
