@@ -41,3 +41,13 @@ Dicas de Modelagem: Defina variáveis para a quantidade de cada ração.
  requisitos nutricionais de cada ração. 
  A função objetivo será o lucro total.
 
+*---------------------
+
+resultado final da quantidade x[l,c]
+
+model.x = [3,2]
+
+    l,c       A  |   B
+milho       |    |
+soja        |    |
+suplemente  |    | 
