@@ -1,0 +1,32 @@
+3. A empresa de manufatura Ômega descontinuou a produção de uma determinada linha de produtos não 
+lucrativa. Esse fato acabou criando um considerável excesso de capacidade produtiva. A direção está levando 
+em conta a possibilidade de dedicar esse excesso de capacidade produtiva para um ou mais produtos. A estes 
+vamos chamá-los de produtos 1, 2 e 3. A capacidade disponível nas máquinas que poderiam limitar a produção 
+está sintetizada na tabela a seguir:  
+
+
+
+O departamento de vendas sinaliza que o potencial de vendas para os produtos 1 e 2 excede a taxa de produção 
+máxima e que o potencial de vendas para o produto 3 é de 20 unidades por semana. O lucro unitário seria, 
+respectivamente, de US$ 25 para os produtos 1, 2 e 3. O objetivo é determinar quanto de cada produto a 
+Ômega deveria produzir para maximizar os lucros. 
+a. Formule um modelo de programação linear para esse problema. 
+b. Use um computador para solucionar este modelo de método simplex. 
+
+
+O que está pedindo?
+R:  maximizar os lucros
+
+O que o modelo precisa decidir?
+R: determinar quanto de cada produto (produto 1,2,3)
+
+Quais sao as regras de negocio?
+R: 
+1- 
+
+2- 
+
+3- 
+
+4- 
+
