@@ -1,0 +1,21 @@
+1. Uma pequena manufatura produz dois modelos, Standard e Luxo, de um certo produto. Cada unidade do 
+modelo Standard exige 1 hora de lixação e 1 hora de polimento. Cada unidade do modelo luxo exige 1 hora de 
+lixação e 4 horas de polimento. A fábrica dispõe de 2 lixadoras e 3 polidoras, cada um trabalhando 40 horas 
+semanais. As margens de lucro são $24 e $34, respectivamente, para cada unidade Standard e Luxo. Não 
+existem restrições de demanda para ambos os modelos. Elabore um modelo de programação linear que permita 
+calcular a produção semanal que maximiza a margem total de lucro do fabricante.
+
+------
+
+O que está pedindo?
+R: Maximização de LUCRO da fabricante
+
+O que o modelo precisa decidir?
+R: Quantidade de produto Standart e quantidade de produto Luxo
+
+Quais sao as regras de negocio?
+R: 
+1- unidade do modelo standart precisa de 1hr de lixa e 1hr de polimento
+2- unidade do modelo luxo precisa de 1 hora de licaçãoe 4hr de polimento
+3- fabrica dispoe de 2 lixadoras e 3 polidoras
+4- maximo de horas semanais de cada equipamento = 40

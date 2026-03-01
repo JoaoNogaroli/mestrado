@@ -1,0 +1,20 @@
+2. Um fazendeiro dispõe de 400 ha cultiváveis com milho, trigo ou soja. Cada hectare de milho exige $2.000 
+para preparação do terreno, 20 homens-dia de trabalho e gera um lucro de $600. Um hectare de trigo envolve 
+custos de $2.400 para preparação do terreno, 30 homens-dia de trabalho e dá um lucro de $800. Analogamente, 
+um hectare de soja exige $1.400, 24 homens-dia e dá um lucro de $400. O fazendeiro dispõe de $800.000 para 
+cobrir os custos de trabalho e 7.200 h-dia de mão de obra. Elabore um modelo de programação linear de forma 
+a calcular a alocação de terra para os vários tipos de cultura com o objetivo de maximizar o lucro total. 
+
+
+O que está pedindo?
+R: Maximizar LUCRO
+
+O que o modelo precisa decidir?
+R: Quanto de terra para Milho, Trigo ou Soja que MAXIMIZE Lucro
+
+Quais sao as regras de negocio?
+R: 
+1- área maxima somando(milho,trigo,soja) <= 400 ha
+2- custo preparação de terreno (milho,trigo,soja) <= (R$, homens-dia)
+3- Valor maximo de custo <= 800.000
+4- Valro maximo de dias <= 300 (7200/24)
