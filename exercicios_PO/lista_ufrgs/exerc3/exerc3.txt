@@ -22,11 +22,15 @@ R: determinar quanto de cada produto (produto 1,2,3)
 
 Quais sao as regras de negocio?
 R: 
-1- 
+1- tempo disponivel
 
-2- 
+2-  horas_necessarias
 
 3- 
 
 4- 
 
+Tipo de máquina Produto 1 Produto 2 Produto 3 
+Fresadora 9 3 5 
+Torno 5 4 0 
+Retificadora 3 0 2

@@ -1,0 +1,16 @@
+O que está pedindo?
+R: maximizar lucro
+
+O que o modelo precisa decidir?
+R: quantidade de Produto A e Produto B
+
+Quais sao as regras de negocio?
+R: 
+1- quantidade de recurso disponivel versus emprego dos recursos em cada produto
+
+2- 
+
+3- 
+
+4- 
+
