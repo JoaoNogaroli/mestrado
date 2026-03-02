@@ -1,0 +1,16 @@
+O que está pedindo?
+R:  Minimizar Custo
+
+O que o modelo precisa decidir?
+R: proporções de 5 ligas para se misturar (5)
+
+Quais sao as regras de negocio?
+R: 
+1- diferentes porcentagens de estanho,zinco,chumbo de cada liga [1:5]
+
+2- custos de cada liga
+
+3- composicao total
+
+4- 
+
