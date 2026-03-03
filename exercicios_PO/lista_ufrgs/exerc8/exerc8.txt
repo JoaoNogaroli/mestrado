@@ -1,16 +1,17 @@
 O que está pedindo?
-R: 
+R: Minimizar Custo
 
 O que o modelo precisa decidir?
-R:
+R: definir quantidade de produtos da relação
+(produção x consumo)
 
 Quais sao as regras de negocio?
 R: 
-1- 
+1- custo de transporte para cada consumidor
 
-2- 
+2- maximo de produção da produtora
 
-3- 
+3- demanda de cada consumidor
 
 4- 
 
