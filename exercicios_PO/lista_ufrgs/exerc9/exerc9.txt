@@ -1,0 +1,15 @@
+O que está pedindo?
+R: minimizar quantidade total investida que cuba necessidade de fluxo de caixa
+
+O que o modelo precisa decidir?
+R: definir % de cada ativo [1,2,3]
+
+Quais sao as regras de negocio?
+R: 
+1- restricao de quantidade a ser investida em cada ativo
+
+2-  restricao de fluxo de caixa minimo exigido no ano
+
+3- cada unidade do ativo custa 1kk
+
+4- 
