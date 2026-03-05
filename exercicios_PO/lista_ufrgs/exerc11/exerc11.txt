@@ -1,0 +1,21 @@
+O que está pedindo?
+R: Maximizar Lucro semanal
+
+O que o modelo precisa decidir? 
+R: quantidade x[soldado, trem]
+
+Quais sao as regras de negocio?
+R: 
+1- 100 horas de pintura semanal  x
+ 
+2- 80 horas de carpintaria semanal  x
+
+3- demanda maxima de soldado é 40  x
+
+4-  1 soldado requer 2h de pintura e 1 h carpintaria  x
+
+5- 1 trem requer 1 hr de pintura e 1h carpintaria  x
+
+6 - custos de mao de obra e indiretos aumentam 14 para soldado e 10 para trem  x
+
+
