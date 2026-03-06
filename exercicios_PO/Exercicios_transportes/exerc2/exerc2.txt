@@ -1,0 +1,16 @@
+O que está pedindo?
+R: minimizar custo total
+
+O que o modelo precisa decidir? (Variável de Decisão)
+R: quantidade de produtos p1,p2,p3 por fábricas (f1,f2,f3,f4,f5)
+
+Quais sao as regras de negocio?
+R: 
+1- restrição de produção "total" de de p1,p2,p3
+
+2- restrição de demanda 
+
+3- 
+
+4- 
+
