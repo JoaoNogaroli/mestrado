@@ -1,16 +1,16 @@
 O que está pedindo?
-R: 
+R:  Custo minimo
 
 O que o modelo precisa decidir? (Variável de Decisão)
-R:
+R: quantidade de producao em cada pais para cada alimento
 
 Quais sao as regras de negocio?
 R: 
-1- 
+1- demanda mundial do alimento
 
-2- 
+2- numero de horas trabalhada minimo para cada alimento
 
-3- 
+3- custo de trabalho para cada alimento em cada pais
 
 4- 
 
