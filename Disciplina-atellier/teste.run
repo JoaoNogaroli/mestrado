@@ -1,0 +1,9 @@
+reset;
+
+model teste.mod;
+
+option solver cplexamp;
+
+solve;
+
+display x1,x2,z;
