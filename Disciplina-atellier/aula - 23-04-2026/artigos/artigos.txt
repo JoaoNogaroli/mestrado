@@ -1,0 +1,27 @@
+1 - Variáveis da análise fundamentalista e dinâmica e o retorno acionário de empresas brasileiras entre 2007 e 2014
+: https://www.sciencedirect.com/science/article/pii/S1809227616300066
+: Autores:
+    :Tanira Lessa Malta e Marcos Antônio de Camargos
+: Área: Finanças
+: Ideia Principal:
+: Github: Arquivo com 
+
+
+2 - Index Tracking com Controle do Número de Ativos
+: https://periodicos.fgv.br/rbfin/article/download/10622/23114/44256
+: Autores:
+    :Leonardo Riegel Sant'Anna; Tiago Pascoal Filomena; Denis Borenstein
+: Área: PO
+: Ideia Principal:Index Tracking com restrição de cardinalidade e alteração de períodos da base
+: Github: Arquivo com 
+
+3 -(PRINCIPAL) Robust enhanced indexation with ESG: An empirical study in the Chinese Stock Market
+: https://pdf.sciencedirectassets.com/271681/1-s2.0-S0264999321X00120/1-s2.0-S026499932100300X/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQC%2B3fhzjD%2FPavMWWdgUof9fZdR0umFxltAA9949%2FafDQwIhAJ3sYfAcuaZmoEtOQKjvNyMEa1a2WkLy1CO1sH975d7OKrMFCFcQBRoMMDU5MDAzNTQ2ODY1IgzBSnN6%2FomG6gFlsAYqkAXfkeFxQF2yob2Av527wu31Wc5ju2DxN0ADOm7eHi%2FCCJm8gAc2RATDkxi2gL4N%2F2SpotoxjzzSYZaaB3rCq5WnOGd4qY0a9Bz2t%2FTOh%2FoiMYv8tu9FYiAK7cEfW6A%2BVezYSe6VC4Am74ltq6u9uiMv1GM6LNlbwze%2BCBxMfHXRdMScEY1xJp05KvWu1RqXDFMV8PiduTQS5NEZ6KTtX3rbc9mmE4Mq3GB7N3Hvl3ucl2jm1DemIZOwESuaEb3Y6HjJMb896Cl30hdK3jN%2FqqLaetr0pb2i1wfYnDD82fYuAQiydoUdHY8bUixqqVtOu34IbErMkQpwwzDm5gHRWjjR3CnoTmENQ3yc1ULkCaomlqjp%2B2KQRe5ujoRcNNIY%2Bj1L3z%2BPU34irScI7%2BgBVeDrL765v%2F036zffVn%2B5Ad%2BJbpYKpJHyzA2oDtvxUBp%2FqVncsoKsjZYt1a0DFso02JI34X7IHePCIdwIJ5wVmE1%2B%2BU%2Fm7jxGTGF4oNHG0RytIlgPDe6M02IiyCe%2FdeDCwof3M7aB1qCp%2FGJv0L1jRLGJ8wO30eZXrbVytzMmVL7DzgEGKUwR9p0pFeDfmaJkcUuXoJoTG5lnzDiBogRxXUowxROisBrMtUeqdxqja%2F9136WPTbhQYPj0N5mUAku7wz5eam9ItBdCWL6iejcy%2BU5W2kJO0IQgNCpD6w%2Fgw0Mw0Y2mjbHZs013MM6gflJ1YGYgKa9H1yaTWptoh2GJ6WEIcTFHoGxwVQzDld%2Bt9Yl%2B1GAGsW28JCBUKqFuaOa8bZ4Da%2BYKYjlpPd8VsSYomAxE8wNnw1m8O3q5kJuncVHeiabvb9h75UHJPsbpjfBVhhHg%2FbdTsXIzWjfEapidkUaBkDDv%2BaTPBjqwAdQnyGL3K6RrljrpKQCOOuHgBPHG%2B5jHAbzFrDGkDSNLzW4%2F%2Be8KgA8sIJZqI1i0TSo2uJ3QdWR3VAwk4kAUr0szMER35vbRN1zF6qdAYUNSQbCUMv8bdXNxBiOM%2BGJ4OMQgLUBgAnua4jpn9006C1MYL5G%2FpVJuFRcEQFJyodiDL3DnB6xRNbCmymNzxNoWYJWNf4hKM1ZXayX%2B0pWZiSg49DJn4IbNjI7PISISnZfz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260422T222454Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY7ZL6DD5G%2F20260422%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=f039fad25a60a3fb558c33425d5ecafb562285d0a416e82653be332a058ca07c&hash=987b4b31158dcf5544aeb4be53423962d1b8c61f4239a857515ee7be1fbd44ff&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S026499932100300X&tid=spdf-df88a4d1-7204-4a6d-b5f9-67a8a6c4b6be&sid=8d9310b92513444c7699f575031c607387b8gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=18145b06505a510056575e&rr=9f080a929d537e04&cc=br
+: Autores:
+    :Xuepeng Li, Fengmin Xu, Kui Jing
+: Área: PO
+: Ideia Principal: Otimização Robusta de IT, quantificando a incerteza através dos 3 pilares (Ambiental, Social, Governança)
+: Github: Arquivo com 
+: Conclusões:
+    : Resultados demonstram que incorporar ESG na 
+    *indexação aprimorada* leva a retornos mais altos e riscos mais baixos.
