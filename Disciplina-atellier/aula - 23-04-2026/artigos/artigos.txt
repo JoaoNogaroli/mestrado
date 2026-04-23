@@ -22,6 +22,11 @@
 : Área: PO
 : Ideia Principal: Otimização Robusta de IT, quantificando a incerteza através dos 3 pilares (Ambiental, Social, Governança)
 : Github: Arquivo com 
+: Público Alvo:
+    : Investidores conservadores e "verdes"
+: Objetivos:
+    :Retirar Ativos que possuem alta incerteza ESG 
+    : adicionar restrições lineares de ESG
 : Conclusões:
     : Resultados demonstram que incorporar ESG na 
     *indexação aprimorada* leva a retornos mais altos e riscos mais baixos.
