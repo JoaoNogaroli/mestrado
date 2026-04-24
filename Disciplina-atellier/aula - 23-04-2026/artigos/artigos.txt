@@ -3,7 +3,7 @@
 : Autores:
     :Tanira Lessa Malta e Marcos Antônio de Camargos
 : Área: Finanças
-: Ideia Principal:
+: Ideia Principal:O objetivo deste estudo é identificar variáveis da análise fundamentalista e dinâmica que explicam o retorno acionário de companhias brasileiras listadas na BM&FBovespa
 : Github: Arquivo com 
 
 
