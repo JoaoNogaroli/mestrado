@@ -1,6 +1,0 @@
-BPA (Ativo)
-O queCódigoCaixa e Equivalentes1.01.01Ativo Total1
-BPP (Passivo)
-O queCódigoDívida CP2.01.04Dívida LP2.02.01Patrimônio Líquido2.03
-DRE (Resultado)
-O queCódigoReceita Líquida3.01EBIT3.05Lucro Líquido3.11
