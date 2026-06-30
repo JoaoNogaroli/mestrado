@@ -1,0 +1,4 @@
+endDate,type,operatingCashFlow,incomeFromOperations,netIncomeBeforeTaxes,adjustmentsToProfitOrLoss,changesInAssetsAndLiabilities,otherOperatingActivities,cashGeneratedInOperations,investmentCashFlow,financingCashFlow,exchangeVariationWithoutCash,foreignExchangeRateWithoutCash,increaseOrDecreaseInCash,initialCashBalance,finalCashBalance,freeCashFlow
+2025-12-31,yearly,250920000,,,,-173074000,0,423993980,-40495000,-207626000,-10428000,,-7629000,18861000,11232000,210424990
+2024-12-31,yearly,149311010,,,,-580992000,0,730303000,-90361000,-92821000,32397000,,-1474000,20335000,18861000,58950000
+2023-12-31,yearly,490809000,,,,585840000,0,-95031000,-88361000,-374132000,-25774000,,2542000,17793000,20335000,402448000
