@@ -4,7 +4,7 @@ st.title("Otimização de Carteiras — Ibovespa")
 
 @st.cache_data                    # roda 1x, guarda o resultado
 def carregar_dados():
-    return pd.read_csv(r'Disciplina-atellier\\mestrado\\carteiras.csv')
+    return pd.read_csv('Disciplina-atellier\mestrado\carteiras.csv')
 
 
 @st.cache_data
