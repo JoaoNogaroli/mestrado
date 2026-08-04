@@ -9,19 +9,23 @@ def carregar_dados():
 
 @st.cache_data
 def acumulado_f(ano):
-    return pd.read_csv(f'plotagem_streamlit/acumulado_f/acumulado_{ano+1}.csv')
+    pa_th = f'Disciplina-atellier/mestrado/plotagem_streamlit/acumulado_f/acumulado_{ano+1}.csv'
+    return pd.read_csv(pa_th)
 
 @st.cache_data
 def acumulado(ano):
-    return pd.read_csv(f'plotagem_streamlit/acumulado/acumulado_{ano}.csv')
+    pa_th = f'Disciplina-atellier/mestrado/plotagem_streamlit/acumulado/acumulado_{ano}.csv'
+    return pd.read_csv(pa_th)
 
 @st.cache_data
 def acumulado_ibov_f(ano):
-    return pd.read_csv(f'plotagem_streamlit/acumulado_ibov_f/ibov_acumulado_{ano+1}.csv')
+    pa_th = f'Disciplina-atellier/mestrado/plotagem_streamlit/acumulado_ibov_f/ibov_acumulado_{ano+1}.csv'
+    return pd.read_csv(pa_th)
 
 @st.cache_data
 def acumulado_ibov(ano):
-    return pd.read_csv(f'plotagem_streamlit/acumulado_ibov/ibov_acumulado_{ano}.csv')
+    pa_th = f'Disciplina-atellier/mestrado/plotagem_streamlit/acumulado_ibov/ibov_acumulado_{ano}.csv'
+    return pd.read_csv(pa_th)
 
 
 df = carregar_dados()
