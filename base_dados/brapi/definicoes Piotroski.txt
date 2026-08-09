@@ -1,0 +1,33 @@
+Grupo 1: Rentabilidade (ROA, Fluxo Cx Op. -FCO-, Evolução ROA, Qualidade Lucro)
+
+*  ROA = (Lucro Líquido ÷ Ativo Total) × 100
+    * Lucro Líquido : DRE (netIncome)
+    * Ativo Total   : BP  (cash + shortTermInvestments)
+    Definição da pontuação: 1 ponto se positivo no ano CORRENTE, 0 se não
+
+*  FCO = Lucro Liquido + Depreciação - (+/- Clientes) - +/- (+/- Estoques) - (+/- Fornecedores)
+    * Pegar valores do ano anterior e verificar se:
+        * (\Delta \) Clientes: Se aumentou, subtraia. Se diminuiu, some. (netReceivables)
+        * (\Delta \) Estoques: Se aumentou, subtraia. Se diminuiu, some. (inventory)
+        * (\Delta \) Fornecedores: Se aumentou, some. Se diminuiu, subtraia. (providers)
+    * Depreciação = (otherOperatingExpenses)  E (costOfRevenue)
+    Definição da pontuação: 1 ponto se positivo no ano CORRENTE, 0 se não
+
+*  Evolução do ROA = 1 ponto se for maior que o ROA do ano passado, 0 se não
+
+*  Qualidade Lucro = 1 ponto se o FCO for maior que o ROA no ano corrente, 0 se não
+
+Grupo 2: Alavancagem, Liquidez e Financiamento (Redução da Dívida, Liquidez Corrente, Ausência de Diluição)
+
+*  Redução da Dívida (longTermLoansAndFinancing) =  1 ponto se houve redução da dívida (emprestimo longo prazo) do ano anterior para o corrente, 0 se não
+
+*  Liquidez Corrente = Ativo Circulante / Passivo Circulante (totalCurrentAssets / currentLiabilities ) = 1 ponto se for maior que o do ano anterior, 0 se não
+
+*  Ausência de Diluição (sharesOutstanding - Estatisticas) = 1 ponto se NÃO houve emissão de novas ações, 0 se não
+
+Grupo 3:  Eficiência Operacional (Margem bruta, Giro de Ativos)
+
+*  Margem Bruta = Lucro Bruto(grossProfit) / Receita total(totalRevenue)  = 1 ponto se for maior que do ano anterior, 0 se não
+
+*  Giro de Ativos = Receita Total(totalRevenue) / Ativo Total(totalAssets) = 1 ponto se for maior que do ano anterior, 0 se não
+
