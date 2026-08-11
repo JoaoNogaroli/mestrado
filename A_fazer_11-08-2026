@@ -10,6 +10,9 @@ Coisas a fazer:
 
   3.  Aprender sobre Multi-Objetivos:
     3.1 """ The decomposition-based methods in which problems are decomposed into a scalar subproblems. Handling 
-each subproblem as a separate problem, then combining the results to obtain a problem solution. These methods 
-are proposed as a Multi-Objective Evolutionary Algorithm based on Decomposition (MOEA/D), Weighted 
-Tchebycheff Method, and Penalty Boundary Intersection (PBI)30 """ 
+        each subproblem as a separate problem, then combining the results to obtain a problem solution. These methods 
+        are proposed as a Multi-Objective Evolutionary Algorithm based on Decomposition (MOEA/D), Weighted 
+        Tchebycheff Method, and Penalty Boundary Intersection (PBI)30 """ 
+     3.1.1 É um framework de algoritmo evolucionário que divide um problema de múltiplos 
+          objetivos em vários subproblemas de objetivo único, otimizando-os de forma 
+          simultânea e colaborativa.
