@@ -1,0 +1,15 @@
+Coisas a fazer:
+  1.  Consertar as datas dos retornos, exemplo:
+    1.1 Hoje: 01/04/2016, vou montar a carteira
+    1.2 Dados do Score: 31/12/2015
+    1.3 Dados Retorno Parâmetro: 01/10/2015 - 31/03/2016
+    1.4 E assim em diante, para os próximos anos
+
+  2.  Quando for fazer os modelos de mín. Var. retirar a parte do Sharpe
+    2.1 Após resultados, fazer novo modelo com o acréscimo dos scores
+
+  3.  Aprender sobre Multi-Objetivos:
+    3.1 """ The decomposition-based methods in which problems are decomposed into a scalar subproblems. Handling 
+each subproblem as a separate problem, then combining the results to obtain a problem solution. These methods 
+are proposed as a Multi-Objective Evolutionary Algorithm based on Decomposition (MOEA/D), Weighted 
+Tchebycheff Method, and Penalty Boundary Intersection (PBI)30 """ 
