@@ -1,0 +1,14 @@
+2. Metodologia
+  2.1 Descrição do problema          ← mantém leve, como já está
+  2.2 Base de dados
+      2.2.1 Fonte, período, universo (IBrX 100, 78 ativos)   ← já tem
+      2.2.2 Construção do F-Score de Piotroski                ← NOVO
+      2.2.3 Construção do Índice Magic Fórmula                ← NOVO
+      2.2.4 Normalização dos indicadores                      ← já discutimos isso
+  2.3 Nomenclatura                    ← já tem, só reposiciona
+  2.4 Modelos de Otimização
+      2.4.1 Modelo 1: Retorno + Score, Máximo Sharpe
+      2.4.2 Modelo 2: Mínima Variância + Score, Máximo Sharpe
+      ...
+  2.5 Procedimento de Backtest (janela rolante Y→Y+1→Y+2)
+  2.6 Métricas de avaliação out-of-sample
