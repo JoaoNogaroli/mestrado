@@ -1,4 +1,3 @@
-from pandas import col
 import streamlit as st
 import pandas as pd
 st.title("Otimização de Carteiras — Ibovespa")
@@ -33,6 +32,8 @@ func_acum = acumulado(ano)
 df_acum = func_acum.set_index('date').rename(columns={'0':'retorno'})
 
 
+tit = f"Peso dos ativos otimizados com retorno do ano {ano}"
+st.subheader(tit)
 st.dataframe(df_ano, hide_index=True)
 
 
