@@ -2,6 +2,7 @@ from heapq import merge
 import os
 import streamlit as st
 import pandas as pd
+import numpy as np
 st.title("Otimização de Carteiras — Ibovespa")
 
 @st.cache_data                    # roda 1x, guarda o resultado
@@ -88,7 +89,11 @@ df_minvar = carregar_dados_minvar()
 
 df_gp = carregar_dados_gp()
 
-df_ano['ativo_piotroski'] = df_piotroski['ativo']
+df_p_ano = df_piotroski[df_piotroski['ano'] == ano].reset_index(drop=True)
+df_ano = df_ano.reset_index(drop=True)
+df_ano['ativo_piotroski'] = df_p_ano['ativo']
+# df_ano['ativo_piotroski'] = df_piotroski['ativo']
+
 df_ano['peso_piotroski'] = df_piotroski['peso']
 
 df_ano['ativo_minvar'] = df_minvar['ativo']
@@ -125,12 +130,36 @@ df_acum_ibov = func_acum_ibov.set_index('Date').rename(columns={'IBOV':'retorno_
 df_acum_ibov.rename(index={'Date':'date'}, inplace=True)
 
 
+merged_df = pd.merge(pd.merge(pd.merge(pd.merge(df_acum, df_acum_ibov, left_index=True, right_index=True),df_piotroski_acum, left_index=True, right_index=True),df_minvar_acum,left_index=True, right_index=True),df_gp_acum,left_index=True, right_index=True)
+
+# _----------------- Tentar plotar uma tabela com sharpe, mdd, e os outros indicadores
+
+st.subheader("Dataframe de análise - Indicadores")
+# st.dataframe(merged_df, hide_index=True,width='stretch',  height="auto",use_container_width=None)
+# print('-------data')
+# print(merged_df.cumprod().cummax())
+def ind(s,  rf_anual=0.105):
+    r = s.pct_change().dropna()   # Voltando do cumprod para retorno . No cumprod eu transformo retorno em acumulados
+    rf  = (1 + rf_anual)**(1/252) - 1
+    exc = r - rf
+
+    dd = (s / s.cummax() - 1).min()  
+    return pd.Series({
+        'Sharpe':  exc.mean() / r.std() * np.sqrt(252),
+        'Sortino': exc.mean() / r[r < 0].std() * np.sqrt(252),
+        'MDD %':     abs(dd)*100,
+        'Calmar':  (s.iloc[-1] / s.iloc[0] - 1) / abs(dd),
+    })
+
+tab = merged_df.apply(ind).T
+st.dataframe(tab)
+print(tab)
+
 tit0 = f"Usando dados de treino da data: 01/10/({int(ano)-1}) -> 31/03/({ano}), comprei a carteira no dia 01/04/{ano}"
 st.subheader(tit0)
 
 titulo1 = f"Gráfico da carteira do ano {ano} com dados do retorno {int(ano)-1} ->  {ano}: DENTRO DA AMOSTRA "
 st.subheader(titulo1)
-merged_df = pd.merge(pd.merge(pd.merge(pd.merge(df_acum, df_acum_ibov, left_index=True, right_index=True),df_piotroski_acum, left_index=True, right_index=True),df_minvar_acum,left_index=True, right_index=True),df_gp_acum,left_index=True, right_index=True)
 
 # merged_df.rename(columns={'retorno_x':'retorno_magic_formula', 'retorno_y':'retorno_ibov', 'retorno':'retorno_piotroski'}, inplace=True)
 # print(merged_df)
