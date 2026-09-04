@@ -89,22 +89,31 @@ df_minvar = carregar_dados_minvar()
 
 df_gp = carregar_dados_gp()
 
-df_p_ano = df_piotroski[df_piotroski['ano'] == ano].reset_index(drop=True)
+df_p_ano = df_piotroski[df_piotroski['ano'] == ano].sort_values('peso', ascending=False).reset_index(drop=True)
+df_minvar_ano = df_minvar[df_minvar['ano'] == ano].sort_values('peso', ascending=False).reset_index(drop=True)
+df_gp_ano = df_gp[df_gp['ano'] == ano].sort_values('peso', ascending=False).reset_index(drop=True)
 df_ano = df_ano.reset_index(drop=True)
-df_ano['ativo_piotroski'] = df_p_ano['ativo']
-# df_ano['ativo_piotroski'] = df_piotroski['ativo']
 
-df_ano['peso_piotroski'] = df_piotroski['peso']
+# 4 tabelas separadas, uma por modelo -- cada uma com seu proprio numero de linhas.
+# Nao junta tudo num so dataframe: cada modelo escolhe uma quantidade diferente de
+# ativos, e alinhar por posicao/indice descarta silenciosamente quem sobra.
+col_mf, col_pio, col_mv, col_gp = st.columns(4)
 
-df_ano['ativo_minvar'] = df_minvar['ativo']
-df_ano['peso_minvar'] = df_minvar['peso']
+with col_mf:
+    st.markdown(f"**Magic Fórmula ({len(df_ano)} ativos)**")
+    st.dataframe(df_ano[['ativos_mf', 'peso_mf']], hide_index=True)
 
-df_ano['ativo_gp'] = df_gp['ativo']
-df_ano['peso_gp'] = df_gp['peso']
-# print(df_piotroski)
+with col_pio:
+    st.markdown(f"**Piotroski ({len(df_p_ano)} ativos)**")
+    st.dataframe(df_p_ano[['ativo', 'peso']], hide_index=True)
 
+with col_mv:
+    st.markdown(f"**Mínima Variância ({len(df_minvar_ano)} ativos)**")
+    st.dataframe(df_minvar_ano[['ativo', 'peso']], hide_index=True)
 
-st.dataframe(df_ano, hide_index=True,width='stretch',  height="auto",use_container_width=None)
+with col_gp:
+    st.markdown(f"**Goal Programming ({len(df_gp_ano)} ativos)**")
+    st.dataframe(df_gp_ano[['ativo', 'peso']], hide_index=True)
 
 
 # =========================================================
@@ -118,7 +127,7 @@ df_piotroski_acum = func_piotroski_acum.set_index('date').rename(columns={'0':'r
 func_minvar_acum = acumulado_minvar(ano)
 df_minvar_acum = func_minvar_acum.set_index('date').rename(columns={'0':'retorno_minvar'})
 # print("==============df_minvar_acum")
-# print(df_minvar_acum)
+print(df_minvar_acum)
 #------ GOAL PROGRAMMING
 func_gp_acum = acumulado_gp(ano)
 df_gp_acum = func_gp_acum.set_index('date').rename(columns={'0':'retorno_gp'})
@@ -153,7 +162,7 @@ def ind(s,  rf_anual=0.105):
 
 tab = merged_df.apply(ind).T
 st.dataframe(tab)
-print(tab)
+# print(tab)
 
 tit0 = f"Usando dados de treino da data: 01/10/({int(ano)-1}) -> 31/03/({ano}), comprei a carteira no dia 01/04/{ano}"
 st.subheader(tit0)
