@@ -21,6 +21,10 @@ def carregar_dados_minvar():
 def carregar_dados_gp():
     return pd.read_csv('carteiras_gp.csv')
 
+@st.cache_data                    # roda 1x, guarda o resultado
+def carregar_dados_linear_sharpe():
+    return pd.read_csv('carteiras_linear_sharpe.csv')
+
 @st.cache_data
 def mf_acumulado_f(ano):
     pa_th = f'plotagem_streamlit/magic_formula_acumulados/ano_frente/acumulado_f/acumulado_{ano}.csv'
@@ -74,6 +78,17 @@ def acumulado_gp(ano):
 def acumulado_gp_f(ano):
     pa_th = f'plotagem_streamlit/goal_programming/ano_frente/acumulado_f/acumulado_{ano}.csv'
     return pd.read_csv(pa_th)
+
+# Linear Sharpe (homogeneizacao de Charnes-Cooper)
+@st.cache_data
+def acumulado_linear_sharpe(ano):
+    pa_th = f'plotagem_streamlit/linear_sharpe/ano_igual/acumulado/acumulado_{ano-1}.csv'
+    return pd.read_csv(pa_th)
+
+@st.cache_data
+def acumulado_linear_sharpe_f(ano):
+    pa_th = f'plotagem_streamlit/linear_sharpe/ano_frente/acumulado_f/acumulado_{ano}.csv'
+    return pd.read_csv(pa_th)
 # ________________________________________
 
 
@@ -88,16 +103,18 @@ df_piotroski = carregar_dados_piotroski()
 df_minvar = carregar_dados_minvar()
 
 df_gp = carregar_dados_gp()
+df_linear_sharpe = carregar_dados_linear_sharpe()
 
 df_p_ano = df_piotroski[df_piotroski['ano'] == ano].sort_values('peso', ascending=False).reset_index(drop=True)
 df_minvar_ano = df_minvar[df_minvar['ano'] == ano].sort_values('peso', ascending=False).reset_index(drop=True)
 df_gp_ano = df_gp[df_gp['ano'] == ano].sort_values('peso', ascending=False).reset_index(drop=True)
+df_linear_sharpe_ano = df_linear_sharpe[df_linear_sharpe['ano'] == ano].sort_values('peso', ascending=False).reset_index(drop=True)
 df_ano = df_ano.reset_index(drop=True)
 
 # 4 tabelas separadas, uma por modelo -- cada uma com seu proprio numero de linhas.
 # Nao junta tudo num so dataframe: cada modelo escolhe uma quantidade diferente de
 # ativos, e alinhar por posicao/indice descarta silenciosamente quem sobra.
-col_mf, col_pio, col_mv, col_gp = st.columns(4)
+col_mf, col_pio, col_mv, col_gp, col_ls = st.columns(5)
 
 with col_mf:
     st.markdown(f"**Magic Fórmula ({len(df_ano)} ativos)**")
@@ -115,6 +132,10 @@ with col_gp:
     st.markdown(f"**Goal Programming ({len(df_gp_ano)} ativos)**")
     st.dataframe(df_gp_ano[['ativo', 'peso']], hide_index=True)
 
+with col_ls:
+    st.markdown(f"**Linear Sharpe ({len(df_linear_sharpe_ano)} ativos)**")
+    st.dataframe(df_linear_sharpe_ano[['ativo', 'peso']], hide_index=True)
+
 
 # =========================================================
 #ACUMULADOS atual
@@ -131,6 +152,9 @@ print(df_minvar_acum)
 #------ GOAL PROGRAMMING
 func_gp_acum = acumulado_gp(ano)
 df_gp_acum = func_gp_acum.set_index('date').rename(columns={'0':'retorno_gp'})
+#------ LINEAR SHARPE
+func_linear_sharpe_acum = acumulado_linear_sharpe(ano)
+df_linear_sharpe_acum = func_linear_sharpe_acum.set_index('date').rename(columns={'0':'retorno_linear_sharpe'})
 # =========================================================
 
 ## IBov atual
@@ -139,7 +163,7 @@ df_acum_ibov = func_acum_ibov.set_index('Date').rename(columns={'IBOV':'retorno_
 df_acum_ibov.rename(index={'Date':'date'}, inplace=True)
 
 
-merged_df = pd.merge(pd.merge(pd.merge(pd.merge(df_acum, df_acum_ibov, left_index=True, right_index=True),df_piotroski_acum, left_index=True, right_index=True),df_minvar_acum,left_index=True, right_index=True),df_gp_acum,left_index=True, right_index=True)
+merged_df = pd.merge(pd.merge(pd.merge(pd.merge(pd.merge(df_acum, df_acum_ibov, left_index=True, right_index=True),df_piotroski_acum, left_index=True, right_index=True),df_minvar_acum,left_index=True, right_index=True),df_gp_acum,left_index=True, right_index=True),df_linear_sharpe_acum,left_index=True, right_index=True)
 
 # _----------------- Tentar plotar uma tabela com sharpe, mdd, e os outros indicadores
 
@@ -174,7 +198,7 @@ st.subheader(titulo1)
 # print(merged_df)
 # st.line_chart(df_acum)
 # st.line_chart(df_acum_ibov)
-st.line_chart(merged_df, y=['retorno_mf', 'retorno_ibov','retorno_piotroski','retorno_minvar','retorno_gp'], x_label = ['data'], y_label = ['retorno'])
+st.line_chart(merged_df, y=['retorno_mf', 'retorno_ibov','retorno_piotroski','retorno_minvar','retorno_gp','retorno_linear_sharpe'], x_label = ['data'], y_label = ['retorno'])
 
 try:
 
@@ -193,6 +217,9 @@ try:
     # ------ GOAL PROGRAMMING
     func_gp_acum_f = acumulado_gp_f(ano)
     df_gp_acum_f = func_gp_acum_f.set_index('date').rename(columns={'0':'retorno_gp'})
+    # ------ LINEAR SHARPE
+    func_linear_sharpe_acum_f = acumulado_linear_sharpe_f(ano)
+    df_linear_sharpe_acum_f = func_linear_sharpe_acum_f.set_index('date').rename(columns={'0':'retorno_linear_sharpe'})
     # ===============================================
 
     ## ibov pra frente
@@ -202,11 +229,11 @@ try:
 
     titulo2 = f"Gráfico da carteira do ano {ano} plotada 1 ano para frente, FORA DA AMOSTRA:  "
     st.subheader(titulo2)
-    merged_df_f = pd.merge(pd.merge(pd.merge(pd.merge(df_acum_f, df_acum_ibov_f, left_index=True, right_index=True),df_piotroski_acum_f, left_index=True, right_index=True),df_minvar_acum_f, left_index=True, right_index=True),df_gp_acum_f, left_index=True, right_index=True)
+    merged_df_f = pd.merge(pd.merge(pd.merge(pd.merge(pd.merge(df_acum_f, df_acum_ibov_f, left_index=True, right_index=True),df_piotroski_acum_f, left_index=True, right_index=True),df_minvar_acum_f, left_index=True, right_index=True),df_gp_acum_f, left_index=True, right_index=True),df_linear_sharpe_acum_f, left_index=True, right_index=True)
     # merged_df_f.rename(columns={'retorno_x':'retorno_magic_formula', 'retorno_y':'retorno_ibov','retorno':'retorno_piotroski'}, inplace=True)
     # st.line_chart(df_acum_f)
     # st.line_chart(df_acum_ibov_f)
-    st.line_chart(merged_df_f, y=['retorno_mf', 'retorno_ibov','retorno_piotroski','retorno_minvar','retorno_gp'], x_label = ['data'], y_label = ['retorno'])
+    st.line_chart(merged_df_f, y=['retorno_mf', 'retorno_ibov','retorno_piotroski','retorno_minvar','retorno_gp','retorno_linear_sharpe'], x_label = ['data'], y_label = ['retorno'])
 except Exception as e:
     print(e)
 
