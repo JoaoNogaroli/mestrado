@@ -16,6 +16,7 @@ Grupo 1: Rentabilidade (ROA, Fluxo Cx Op. -FCO-, Evolução ROA, Qualidade Lucro
 *  Evolução do ROA = 1 ponto se for maior que o ROA do ano passado, 0 se não
 
 *  Qualidade Lucro = 1 ponto se o FCO for maior que o ROA no ano corrente, 0 se não
+--------------------------/////////-------
 
 Grupo 2: Alavancagem, Liquidez e Financiamento (Redução da Dívida, Liquidez Corrente, Ausência de Diluição)
 
